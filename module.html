@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+    <!--head content-->
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,inline-scale=1,maximum-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Home page</title>
+   
+    <link rel="how" href="main.html">
+     </head>
+    
+    <body  background="C:\Users\SWAROOPA\OneDrive\Desktop\images (5).jpeg"   style="background-color: khaki;">
+        <nav>
+         <!--main details-->
+        <div class="dropdown"> 
+            
+            <button class="drop">
+                <div class="new"></div>
+                <div class="new"></div>
+                <div class="new"></div></button>
+            
+            <div id="menu" class="dropcontent">
+    
+                <div><!----avatar details-->
+                    <img src="C:\Users\SWAROOPA\OneDrive\Desktop\avatar.png" id="avatar" alt="avatar1">
+                    <h2  id="newname"></h2>
+                </div>
+                
+                 <h2>Your Profile Details</h2>
+                 <!----name-->
+                 <h4 style="display: block;" id="name"></h4>
+            
+                 <!----order details-->
+                 <div id="menu1">
+                    <h4 style="margin-left: 30%;">Order Details</h4>
+                    <h3 id="element3">No.of.orders:0</h3>
+                </div>
+                 <!----page details-->
+                 <div class="conatiner" style="display: block;">
+                 <a href="about.html" style="text-decoration: none;padding-left: 35%;padding: 30%;font-size:150%;">About us</a><br>
+                 <a href="contact.html" style="text-decoration:none; padding-left: 30%;font-size: 150%; ">Contact us</a>
+                 </div>
+                <!----footer  details--><button id="footbtn" type="button" name="logout">Logout</button>
+                
+        </div>
+    </div>
+        </nav>  
+    <!--content page-->
+    <div class="formsub">
+        <h1 style="text-align: center;font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">ORDER FORM</h1>
+        <form method="post" class="ORDERFORM" style="color: black;">
+            <pre><strong>
+            Name:             <input type="text" id="name" required><br>
+            Address:          <input type="text" id="address" required><br>
+            WhatsApp number:  <input type="text" id="no" required></input><br>
+            State:            <input type="text" id="state" required><br>
+            District:         <input type="text" id="dis" required><br>
+    <input type="checkbox" id="checkbox" required>Did you clear with the budget details in about page 
+                            <input type="submit" id="submit" onclick="myFunction()"><br>   </pre> </strong>          
+        </form>
+      </div>
+    </body>
+     <script>
+       function myFunction(){
+        let text="To confirm your order press ok ";
+        var see=0;
+        if(confirm(text)==true)
+        {
+          
+           see=see+1;
+        }
+        else{
+            see=0;
+        }
+        document.getElementById("element3").innerHTML="no.of.orders:".concat(see);
+         }
+        </script>
+    <style>
+     h2{
+           align-content: center;
+            margin-left: 14%;
+            display: block;
+            
+        }
+        #element3
+        {
+            padding: 20%;
+            color: white;
+        }
+       
+       .dropdown
+        {
+            position:relative;
+            display: inline-block;
+            
+            
+            
+        }
+        .drop
+        {
+           
+           color: antiquewhite;
+            border-style: dotted;
+            padding: 0.2em;
+            background-color:rgb(49, 49, 119);
+         
+        }
+        .dropcontent
+        {
+            display:none;
+            position: relative;
+            width:100%;
+            height:100%;
+            background-color: black;
+            color: white;
+            padding: 20px;
+
+            z-index: 1;
+            
+        }
+       
+        #footbtn{
+            margin-top: 104%;
+            display: block;
+            
+        }
+        #avatar
+        {
+            border-radius: 45%;
+            display: block;
+            width: 45%;
+            height: 15%;
+            margin-left: 16%;
+        }
+        .dropdown:hover  .dropcontent {
+        display: block;
+       }
+        .dropdown:hover  .drop{
+        background-color: deepskyblue;
+       }
+       .formsub{
+        display: inline;
+        position: fixed;
+        }
+       form{
+        
+        color:black;
+
+         }
+    
+     .formsub{
+       background-color: aqua;
+       border-radius: 90px;
+       opacity: 0.5;
+        padding: 10%;
+        padding-top: 5%;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-bottom: 0px;
+        text-align: center;
+    }
+    #address{
+       margin-top: 20px;
+    }
+    #state{
+       margin-top: 20px;
+    }
+    #no{
+       margin-top: 20px;
+    }
+    #dis{
+       margin-top: 20px;
+    }
+    #submit{
+        font-size: larger;
+        margin-top: 20px;
+        border-color: aquamarine;
+        }
+    #top{
+        background-color: black;
+        color: azure;
+        overflow: right;
+        padding: 0.6em;
+        font-size: 16px;
+        border-style:dashed;
+       }
+       .new{
+        width: 35px;
+        height: 3px;
+        background-color: black;
+        margin: 6px 0;
+       }
+       #menu1{
+        display: block;
+       }
+       body{
+        background-color: aquamarine;
+              background-repeat: no-repeat;
+              background-position: 110%;
+              background-size: 100% 120%;
+              background-attachment:fixed;
+              border: 20%;
+               box-shadow: 50px;
+            
+              }
+              
+            
+       
+</style>
+</html>
